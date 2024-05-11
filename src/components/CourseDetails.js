@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { enrollCourse } from "../../redux/studentSlice";
-import { getDoc, doc, updateDoc, arrayUnion } from "firebase/firestore";
-import firestore from "../../firebase/firebase";
-import { auth } from "../../firebase/firebase";
-import { query, collection, where, getDocs } from "firebase/firestore";
+import { doc, updateDoc, arrayUnion } from "firebase/firestore";
+import firestore from "../firebase/firebase";
 import {
   Accordion,
   AccordionItem,
@@ -13,8 +10,8 @@ import {
   AccordionIcon,
   Box,
 } from "@chakra-ui/react";
-import { useDispatch, useSelector } from "react-redux";
-import { GetStudentData } from "../getStudentData";
+import { useDispatch } from "react-redux";
+import { GetStudentData } from "./getStudentData";
 
 const CourseDetails = () => {
   //course id

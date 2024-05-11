@@ -1,11 +1,6 @@
 import React, { useEffect, useState } from "react";
-import "../../index.css";
 import { useDispatch, useSelector } from "react-redux";
-import firestore from "../../firebase/firebase";
-import { getStudentData } from "../getStudentData";
-import { getDoc } from "firebase/firestore";
-import { onAuthStateChanged } from "firebase/auth";
-import { Progress } from "@chakra-ui/react";
+import firestore from "../firebase/firebase";
 import {
   addDoc,
   doc,
@@ -15,9 +10,9 @@ import {
   where,
 } from "firebase/firestore";
 import { Link, useNavigate } from "react-router-dom";
-import { removeStudent } from "../../redux/studentSlice";
-import { auth } from "../../firebase/firebase";
-import { setStudentsReducer } from "../../redux/studentSlice";
+import { removeStudent } from "../redux/studentSlice";
+import { auth } from "../firebase/firebase";
+import { setStudentsReducer } from "../redux/studentSlice";
 
 const CourseListing = () => {
   const [searchString, setSearchString] = useState("");

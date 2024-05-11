@@ -1,12 +1,11 @@
 import { useEffect } from "react";
 import "./App.css";
-import CourseListing from "./components/Course-Listing/CourseListing";
+import CourseListing from "./components/CourseListing";
 import { useDispatch } from "react-redux";
 import axios from "axios";
 import { setCourseReducer } from "./redux/coursesSlice";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import CourseDetails from "./components/Course-Details/CourseDetails";
-import { ChakraProvider } from '@chakra-ui/react'
+import CourseDetails from "./components/CourseDetails";
 import Dasboard from "./components/Dasboard";
 import AuthPage from "./components/AuthPage";
 
